@@ -122,7 +122,7 @@ window.addEventListener('offline', () => {
 // Registrar Service Worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-        navigator.serviceWorker.register('mi-primera-pwa/serviceWorker.js')
+        navigator.serviceWorker.register('./serviceWorker.js')
             .then(function(registration) {
                 console.log('✅ Service Worker registrado:', registration.scope);
             })
