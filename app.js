@@ -19,26 +19,21 @@ let tasks = [];
 window.addEventListener('load', async () => {
   try {
     tasks = await loadTasksFromDB();
-    console.log('✅ Tareas cargadas:', tasks.length);
+    console.log('✅ Tareas cargadas:', tasks);
   } catch (error) {
-    console.error('❌ Error cargando tareas:', error);
+    console.error('Error cargando tareas de IndexedDB:', error);
     tasks = [];
   }
   renderTasks();
 });
 
-
 // Guarda las tareas en la base de datos
-async function saveTasks() {
-  await saveTasksToDB(tasks);
-  console.log('✅ Tareas guadadas:', tasks.length);
-}
-
 async function saveTasks() {
   try {
     await saveTasksToDB(tasks);
+    console.log('✅ Tareas guardadas en IndexedDB');
   } catch (error) {
-    console.error('❌ Error guardando tareas:', error);
+    console.error('Error guardando tareas:', error);
   }
 }
 
@@ -99,11 +94,6 @@ function deleteTask(id) {
     tasks = tasks.filter(task => task.id !== id);
     saveTasks();
     renderTasks();
-}
-
-// Guardar en localStorage
-function saveTasks() {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 // Detectar conexión
