@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sin conexión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      margin: 0;
+      padding: 2em;
+    }
+    .card {
+      background: rgba(0,0,0,0.3);
+      border-radius: 12px;
+      padding: 2em;
+      max-width: 400px;
+    }
+    button {
+      margin-top: 1em;
+      padding: 0.8em 1.5em;
+      background: white;
+      color: #764ba2;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🔴 Sin conexión</h1>
+    <p>Parece que no tienes internet en este momento.</p>
+    <p>Puedes seguir usando la app, y se actualizará cuando vuelvas a conectarte.</p>
+    <button onclick="location.reload()">Reintentar</button>
+  </div>
+</body>
+</html>

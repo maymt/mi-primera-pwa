@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2196F3">
+    
+    <!-- Configuración PWA -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Soporte iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/images/192.png">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Mi Primera PWA</title>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Mi Lista de Tareas</h1>
+        
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Escribe una tarea...">
+            <button id="addButton">Agregar</button>
+        </div>
+        
+        <ul id="taskList"></ul>
+        
+        <div class="status" id="status">🟢 Online</div>
+    </div>
+    
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
